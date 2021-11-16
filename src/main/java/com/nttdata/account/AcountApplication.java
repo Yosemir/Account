@@ -1,4 +1,4 @@
-package com.nttdata.acount;
+package com.nttdata.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
