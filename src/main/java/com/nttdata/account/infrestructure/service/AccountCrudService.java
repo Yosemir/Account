@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 import java.time.LocalDateTime;
 
 @Component
@@ -52,9 +51,12 @@ public class AccountCrudService implements AccountRepository {
         account.setId(accountDao.getId());
         account.setBalance(accountDao.getBalance());
         account.setCoin(accountDao.getCoin());
-        account.setCustomer(accountDao.getCustomer());
-        account.setTyperAccount(accountDao.getTyperAccount());
+        account.setIdcustomer(accountDao.getIdcustomer());
+        account.setTypeAccount(accountDao.getTypeAccount());
         account.setDate(LocalDateTime.now().toLocalDate());
+        account.setTypeCard(accountDao.getTypeCard());
+        account.setNumberCard(accountDao.getNumberCard());
+        account.setCcv(accountDao.getCcv());
         return account;
     }
 
@@ -64,9 +66,12 @@ public class AccountCrudService implements AccountRepository {
         accountDao.setId(account.getId());
         accountDao.setBalance(account.getBalance());
         accountDao.setCoin(account.getCoin());
-        accountDao.setCustomer(account.getCustomer());
-        accountDao.setTyperAccount(account.getTyperAccount());
+        accountDao.setIdcustomer(account.getIdcustomer());
+        accountDao.setTypeAccount(account.getTypeAccount());
         accountDao.setDate(LocalDateTime.now().toLocalDate());
+        accountDao.setTypeCard(account.getTypeCard());
+        accountDao.setNumberCard(account.getNumberCard());
+        accountDao.setCcv(account.getCcv());
         return accountDao;
     }
 
