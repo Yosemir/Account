@@ -1,7 +1,6 @@
 package com.nttdata.account.model;
 
 import com.nttdata.account.domain.Account;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

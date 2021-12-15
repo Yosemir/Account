@@ -30,6 +30,13 @@ jobs:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
 
+        - name: Ejecutando sonarqube
+          id: Sonar
+          run: mvn sonar:sonar \
+            -Dsonar.projectKey=account \
+            -Dsonar.host.url=http://34.70.72.213:9000 \
+            -Dsonar.login=9e33a34d386ac5cd318b2938a037102180b20d48
+
   deploy:
     runs-on: ubuntu-latest
     needs: build

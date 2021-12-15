@@ -1,10 +1,10 @@
 spring:
   application:
-    name: Account
+    name: account
   cloud:
     config:
-      uri:
-        - http://localhost:8081
+      enabled: true
+      uri: http://localhost:8081
   data:
     mongodb:
-      uri: mongodb://localhost:27017/bootcamp
+      uri: mongodb://34.70.72.213:27017/bootcamp

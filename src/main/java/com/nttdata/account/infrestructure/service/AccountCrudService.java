@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
 import java.time.LocalDateTime;
 
 @Component
@@ -51,12 +52,19 @@ public class AccountCrudService implements AccountRepository {
         account.setId(accountDao.getId());
         account.setBalance(accountDao.getBalance());
         account.setCoin(accountDao.getCoin());
-        account.setIdcustomer(accountDao.getIdcustomer());
         account.setTypeAccount(accountDao.getTypeAccount());
+        account.setIdcustomer(accountDao.getIdcustomer());
         account.setDate(LocalDateTime.now().toLocalDate());
         account.setTypeCard(accountDao.getTypeCard());
         account.setNumberCard(accountDao.getNumberCard());
         account.setCcv(accountDao.getCcv());
+        account.setExpirationCard(accountDao.getExpirationCard());
+        account.setMinAmount(accountDao.getMinAmount());
+        account.setTransferLimit(accountDao.getTransferLimit());
+        account.setTransferCommission(accountDao.getTransferCommission());
+        account.setMaintenanceCommission(accountDao.getMaintenanceCommission());
+        account.setAccountNumber(accountDao.getAccountNumber());
+        account.setCci(accountDao.getCci());
         return account;
     }
 
@@ -66,12 +74,19 @@ public class AccountCrudService implements AccountRepository {
         accountDao.setId(account.getId());
         accountDao.setBalance(account.getBalance());
         accountDao.setCoin(account.getCoin());
-        accountDao.setIdcustomer(account.getIdcustomer());
         accountDao.setTypeAccount(account.getTypeAccount());
+        accountDao.setIdcustomer(account.getIdcustomer());
         accountDao.setDate(LocalDateTime.now().toLocalDate());
         accountDao.setTypeCard(account.getTypeCard());
         accountDao.setNumberCard(account.getNumberCard());
         accountDao.setCcv(account.getCcv());
+        accountDao.setExpirationCard(account.getExpirationCard());
+        accountDao.setMinAmount(account.getMinAmount());
+        accountDao.setTransferLimit(account.getTransferLimit());
+        accountDao.setTransferCommission(account.getTransferCommission());
+        accountDao.setMaintenanceCommission(account.getMaintenanceCommission());
+        accountDao.setAccountNumber(account.getAccountNumber());
+        accountDao.setCci(account.getCci());
         return accountDao;
     }
 
